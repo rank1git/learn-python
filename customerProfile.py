@@ -1,9 +1,16 @@
-first_name = "david"
-last_name = "ADDOR"
-age = "28"
-deal_value = 15750.5678
-years_as_customer = 3
-product = "cloud security"
+"""
+Customer Profile Generator
+Generates a formatted customer profile from raw data.
+Includes name formatting, deal value formatting,
+tier classification, and tenure messaging.
+"""
+
+first_name = input("first name: ")
+last_name = input("last name: ")
+age = input("age: ")
+deal_value = float(input("deal value: "))
+years_as_customer = int(input("years as a customer: "))
+product = input("product name: ")
 
 heading = "===== CUSTOMER PROFILE ====="
 full_name = first_name.capitalize() + " " + last_name.capitalize()
