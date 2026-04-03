@@ -47,6 +47,10 @@ leads = [
 # Scoring rules stored as lookup tables for easy maintenance
 # Format: (threshold, points) — evaluated highest to lowest
 def score_lead(lead):
+    """
+    Takes a lead dictionary and returns a score based on
+    deal value, company size, years in business, and product.
+    """
     score = 0
     deal_value = lead["deal_value"]
     company_size = lead["company_size"]
@@ -93,6 +97,9 @@ print(score_lead(leads[1]))
 
 
 def get_tier(score):
+    """
+    Takes a score and converts it to a tier based on where the score falls within different ranges.
+    """
     if score >= 70:
         return "Platinum"
     elif 40 <= score <= 69:
